@@ -1,36 +1,45 @@
-# MVP Decor Colors 3D/AR
+# Decor Colors 3D - MVP
 
 Configurador 3D de acabamentos especiais para Decor Colors.
 
-## Visao do produto
+## Estrutura
 
-MVP focado em vitrine tecnica e comercial para acabamentos especiais, com viewer 3D em Three.js, navegacao por produtos, controle de cor, paineis de midia e lanterna virtual para simulacao de iluminacao.
+```
+Mvp-0.0.0.1/
+├── index.html          # Pagina principal
+├── css/
+│   └── styles.css      # Estilos
+├── js/
+│   ├── main.js         # Ponto de entrada
+│   ├── viewer.js       # Three.js + GLTFLoader
+│   ├── ui.js           # Interface
+│   └── catalog.js      # Catologo de produtos
+├── models/             # Modelos 3D .glb (vazio - adicionar depois)
+└── media/              # Videos e imagens (vazio - adicionar depois)
+```
+
+## Como rodar
+
+1. Clone ou baixe o repositorio
+2. Abra com um servidor local (necessario para ES6 modules):
+   - VS Code: extensao Live Server
+   - Python: `python -m http.server 8000`
+   - Node: `npx http-server -p 8000`
+3. Acesse `http://localhost:8000`
+
+## Proximos passos
+
+- [ ] Adicionar modelos .glb em `models/`
+- [ ] Adicionar videos em `media/videos/`
+- [ ] Adicionar imagens em `media/img/`
+- [ ] Testar navegacao e troca de cores
 
 ## Stack
 
-- Three.js (r155+)
-- HTML5 + CSS3 + JavaScript (ES6+)
-- GLTFLoader para modelos .glb
+- Three.js r155 (via CDN)
+- JavaScript ES6+ (modulos)
+- HTML5 + CSS3
 
-## Estrutura
+---
 
-- `index.html` — Pagina principal com canvas e UI flutuante
-- `css/styles.css` — Estilos da interface
-- `js/main.js` — Logica do viewer 3D
-- `js/catalog.js` — Catalogo JSON dos produtos
-- `js/viewer.js` — Modulo de renderizacao Three.js
-- `js/ui.js` — Modulo de interface e eventos
-- `models/` — Modelos 3D .glb (a adicionar)
-- `media/` — Imagens e videos de referencia (a adicionar)
-
-## Roadmap
-
-- [x] Fase 1 — Viewer comercial (base)
-- [ ] Fase 2 — Biblioteca inteligente (RAG)
-- [ ] Fase 3 — Captura do ambiente
-- [ ] Fase 4 — AR inicial
-- [ ] Fase 5 — Profundidade e oclusao
-
-## Licenca
-
-Privado — Decor Colors
+Privado — Decor Colors © 2026

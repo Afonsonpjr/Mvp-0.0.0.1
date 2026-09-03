@@ -3,15 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MVP Decor Colors 3D/AR</title>
+  <title>Decor Colors 3D - MVP</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <div id="ui-container">
-    <canvas id="viewer-canvas"></canvas>
-    <div id="ui-overlay"></div>
+  <div id="app">
+    <canvas id="viewer"></canvas>
+    <div id="ui">
+      <div id="painel-produto" class="painel">
+        <h2 id="nome-produto">Carregando...</h2>
+        <p id="categoria-produto" class="categoria"></p>
+        <div id="navegacao">
+          <button id="btn-anterior">&#8592;</button>
+          <button id="btn-proximo">&#8594;</button>
+        </div>
+      </div>
+      <div id="painel-controles" class="painel">
+        <h3>Cor</h3>
+        <div id="paleta" class="paleta"></div>
+        <label>Cor livre:</label>
+        <input type="color" id="seletor-cor" value="#d8d0c8" />
+        <div id="aviso-cor" class="aviso" style="display:none;"></div>
+        <h3>Iluminacao</h3>
+        <label>Intensidade:</label>
+        <input type="range" id="slider-lanterna" min="0" max="2" step="0.1" value="1" />
+        <button id="btn-lanterna">Lanterna: ON</button>
+      </div>
+      <div id="painel-midia" class="painel">
+        <h3>Videos</h3>
+        <div id="lista-videos"></div>
+        <h3>Referencias</h3>
+        <div id="lista-referencias"></div>
+      </div>
+    </div>
   </div>
-
   <script type="module" src="js/main.js"></script>
 </body>
 </html>
